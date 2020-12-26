@@ -1,0 +1,1 @@
+This is git-practice-file-2, used as a dummy file for git practice.

@@ -5,3 +5,8 @@ UNDOING THINGS
 1. Amending a commit message before pushing (git-practice-file-1):
 
     git commit --amend
+
+2. Forgotten file: Adding a file to a commit (git-practice-file-2) after committing staged files already but before pushing:
+
+    git add git-practice-file-2.txt
+    git commit --amend
