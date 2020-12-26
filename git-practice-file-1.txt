@@ -1,0 +1,7 @@
+Git Tasks:
+
+UNDOING THINGS
+
+1. Amending a commit message before pushing (git-practice-file-1):
+
+    git commit --amend
