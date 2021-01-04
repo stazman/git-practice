@@ -1,0 +1,29 @@
+Basic Git Commands:
+
+Tracking AND staging files:
+
+git add <file>
+git add . [for all changed files]
+
+git status
+git status -s [for short form]
+
+
+
+Committing files:
+
+git commit -m 'Makes a commit message' [notice the grammar of this sample commit]
+git commit -a -m 'Makes a commit message'
+
+[The -a option lets you commit all unstaged, uncommitted files without specifically staging them]
+[Note: the -a option doesn't work for any untracked files (which would usually happen because they're newly created files). The command git add still needs to be run to track the files before they can be committed at all.]
+
+
+
+Seeing changes in files:
+
+git diff [shows changes in files that have already been added; doesn't show content of new, unstaged files]
+git diff --staged
+git diff --cached
+
+[git diff --staged and git diff --cached do the same thing]
