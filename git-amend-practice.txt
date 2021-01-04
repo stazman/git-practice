@@ -1,0 +1,74 @@
+Git Tasks:
+
+UNDOING THINGS
+
+1. Amending a commit message before pushing (git-practice-file-1):
+
+    git commit --amend
+
+NOTE: The COMMIT-MSG file that comes up in Visual Studio Code shows information but is NOT WHERE YOU WRITE THE NEW/EDITED COMMIT MESSAGE; that will need to go in the usual places — in Explorer sidebar or on command line
+
+2. Forgotten file: Adding a file to a commit (git-practice-file-2) after committing staged files already but before pushing:
+
+    git add git-practice-file-2.txt
+    git commit --amend
+
+3. Changing the commit message of a commit that has already been pushed (most recent commit only)
+
+    git commit --amend
+    git push --force <name of relevant branch>
+
+
+NOTE: For the sake of not needing to undo things that are relatively very complicated in this instructional file itself, a separate repo has been created for practicing undoing things. The separate repo is here: https://github.com/stazman/undoing-things-in-git
+
+4. Changing the commit message of a commit that has already been pushed (older than most recent commit)
+
+    git rebase -i HEAD~n
+
+    Changing older commit messages (from https://www.educative.io/edpresso/how-to-change-a-git-commit-message-after-a-push):
+
+    If the message needs to be amended for an older commit, then the interactive rebase tool can be used:
+
+    ---> Navigate to the repository that contains the commit you want to amend and open a terminal window.
+
+    ---> Use the git rebase -i HEAD~n command to display a list of the last nn commits in your default text editor.
+
+    For example, the following command would display a list of the last three commits in your current branch:
+
+    git rebase -i HEAD~3
+
+    The list would be similiar to this:
+
+        pick e499d89 Delete CNAME
+        pick 0c39034 Better README
+        pick f7fde4a Change the commit message but push the same commit.
+
+        # Rebase 9fdb3bd..f7fde4a onto 9fdb3bd
+        #
+        # Commands:
+        # p, pick = use commit
+        # r, reword = use commit, but edit the commit message
+        # e, edit = use commit, but stop for amending
+        # s, squash = use commit, but meld into previous commit
+        # f, fixup = like "squash", but discard this commit's log message
+        # x, exec = run command (the rest of the line) using shell
+        #
+        # These lines can be re- ordered; they are executed from top to
+        bottom.
+        #
+        # If you remove a line here THAT COMMIT WILL BE LOST.
+        #
+        # However, if you remove everything, the rebase will be aborted.
+        #
+        # Note that empty commits are commented out
+
+        Replace pick with reword before each commit message that needs to be changed:
+        pick e499d89 Delete CNAME
+        reword 0c39034 Better README
+        reword f7fde4a Change the commit message but push the same commit.
+
+    ---> Save and close the commit list file.
+
+    ---> In each resulting commit file, type the new commit message, save the file, and close it.
+
+    ---> Force push the amended commits using git push --force.
