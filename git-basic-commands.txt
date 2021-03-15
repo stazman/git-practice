@@ -1,5 +1,11 @@
 Basic Git Commands:
 
+Create a local repo:
+
+git init
+
+
+
 Tracking AND staging files:
 
 git add <file>
@@ -27,3 +33,21 @@ git diff --staged
 git diff --cached
 
 [git diff --staged and git diff --cached do the same thing]
+
+
+Pushing to local repo:
+
+git push
+
+
+Setting a remote:
+
+git add origin master
+
+
+Pushing to remote:
+
+git push origin master
+
+
+NOTE: Your commits are added to the remote repo individually and they are added to the contribution chart of green squares individually
