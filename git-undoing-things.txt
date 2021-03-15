@@ -1,0 +1,14 @@
+UNDOING THINGS:
+
+Resetting staged files and commits
+
+1. Resetting Staged Files
+
+    git reset
+
+
+2. Untracking a file or directory without removing it from your local file system (such as if you don't want to make a repo private or delete it and re-create it, but you've forgotten to .gitignore something after you've already pushed the empty file to a remote, or if what's in the file that's already been pushed to a remote isn't sensitive information)?
+
+  Individual file: git -rm --cached <filename>
+
+  Individual directory: git -rm --cached -r <filename>
