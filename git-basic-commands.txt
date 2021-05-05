@@ -1,12 +1,12 @@
 Basic Git Commands:
 
-Create a local repo:
+1. Create a local repo:
 
 git init
 
 
 
-Tracking AND staging files:
+2. Tracking AND staging files:
 
 git add <file>
 git add . [for all changed files]
@@ -16,7 +16,7 @@ git status -s [for short form]
 
 
 
-Committing files:
+3. Committing files:
 
 git commit -m 'Makes a commit message' [notice the grammar of this sample commit]
 git commit -a -m 'Makes a commit message'
@@ -26,7 +26,13 @@ git commit -a -m 'Makes a commit message'
 
 
 
-Seeing changes in files:
+4. Viewing the latest unpushed commit on each branch:
+
+git log --branches --not --remotes
+
+
+
+5. Seeing changes in files:
 
 git diff [shows changes in files that have already been added; doesn't show content of new, unstaged files]
 git diff --staged
@@ -35,17 +41,20 @@ git diff --cached
 [git diff --staged and git diff --cached do the same thing]
 
 
-Pushing to local repo:
+
+6. Pushing to local repo:
 
 git push
 
 
-Setting a remote:
+
+7. Setting a remote:
 
 git add origin master
 
 
-Pushing to remote:
+
+8. Pushing to remote:
 
 git push origin master
 
